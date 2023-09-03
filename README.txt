@@ -1,0 +1,1 @@
+This is an Odoo Module that adds expiration date and vendor reference in the Goods Recieved Report. Depends on GRN written by Loyal IT Solutions Pvt Ltd in Odoo app store.

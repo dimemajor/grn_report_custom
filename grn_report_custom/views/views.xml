@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="list_grn_report_view_extend" model="ir.ui.view">
+             <field name="name">grn.report.view.list.extend</field>
+             <field name="model">grn.report.view</field>
+             <field name="inherit_id" ref="grn_report.list_grn_report_view"/>
+             <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="partner_ref"/>
+                </xpath>
+                <xpath expr="//field[@name='productname']" position="after">
+                    <field name="lot_number"/>
+                </xpath>
+                <xpath expr="//field[@name='received_qty']" position="before">
+                    <field name="expiration_date"/>
+                </xpath>
+                <xpath expr="//field[@name='demanded_qty']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>
