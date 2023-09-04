@@ -104,10 +104,10 @@ class grn_report_wizard(models.TransientModel):
         for row in self.env.cr.dictfetchall():
             sl += 1
             demanded_qty = row.get('demanded_qty') if row.get('demanded_qty') else 0.0
-            effective_date = row.get('effective_date') if row.get('effective_date') else ''
+            effective_date = row.get('effective_date') if row.get('effective_date') else None
             received_qty = row.get('received_qty') if row.get('received_qty') else 0.0
             lot_number = row.get('lot_number') if row.get('lot_number') else ''
-            expiration_date = row.get('expiration_date') if row.get('expiration_date') else 0.0
+            expiration_date = row.get('expiration_date') if row.get('expiration_date') else None
             origin = row.get('origin') if row.get('origin') else ''
             partner_ref = row.get('partner_ref') if row.get('partner_ref') else ''
             name = row.get('name') if row.get('name') else " "
